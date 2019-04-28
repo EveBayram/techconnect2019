@@ -1,0 +1,50 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<form method="post" action="/consent">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/form-handler" method="post" novalidate>
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                      <h1 class="govuk-fieldset__heading" style="padding-bottom: 10px;">
+                        How do you want to prove your marriage or civil partnership to us?
+                      </h1>
+                    </legend>
+
+                    <div class="govuk-inset-text">
+                      Digital authentication of marriage or civil partnership takes under 1 week on average. It can take up to 5 weeks to prove your marriage or civil partnership by post.
+                    </div>
+                    <div class="govuk-!-padding-bottom-3"></div>
+                    <div class="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="consent-1" name="consent" type="radio" value="Digital authentication of my certificate" {{ checked('consent', 'Digital authentication of my certificate') }}>
+                        <label class="govuk-label govuk-radios__label" for="consent-1">
+                          Digital authentication of my certificate
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="consent-2" name="consent" type="radio" value="By sending my certificate post" {{ checked('consent', 'By sending my certificate by post') }}>
+                        <label class="govuk-label govuk-radios__label" for="consent-2">
+                          By sending my certificate by post
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <a class="govuk-button" href="existing_vault" role="button">
+                  Continue
+                </a>
+  </div>
+</form>
+
+{% endblock %}

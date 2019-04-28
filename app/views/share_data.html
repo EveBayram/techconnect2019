@@ -1,0 +1,43 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<form method="post" action="/vault_exists">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h1 class="govuk-fieldset__heading">
+        You need to consent to allow this service to check information stored in your Gov Vault account
+      </h1>
+    </legend>
+      <div class="govuk-!-padding-bottom-3"></div>
+    <p>Once you sign into your Gov Vault account, the Bereavement Support Payment Service will validate the following information against the records in your Gov Vault account:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>the name of your partner</li>
+        <li>the date of your marriage or civil partnership</li>
+      </ul>
+      <p>This information will not be stored by the Bereavement Support Payment Service.</p>
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+          I consent to allow the Bereavement Support Payment Service to validate this information against the record in my Gov Vault account
+        </label>
+      </div>
+      <div class="govuk-!-padding-bottom-4"></div>
+
+
+                <a class="govuk-button" href="qr_code" role="button">
+                  Continue
+                </a>
+  </div>
+</form>
+
+{% endblock %}

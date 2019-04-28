@@ -1,0 +1,49 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<form method="post" action="/vault_exists">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/form-handler" method="post" novalidate>
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                      <h1 class="govuk-fieldset__heading" style="padding-bottom: 10px;">
+                        Do you already have a Gov Vault account?
+                      </h1>
+                    </legend>
+                    <div class="govuk-inset-text">
+                      Gov Vault is a government service that allows you to store and prove characteristics about yourself,  like marriage and professional licenses, when you interact with government.
+                    </div>
+                    <div class="govuk-!-padding-bottom-3"></div>
+                    <div class="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="exists-1" name="exists" type="radio" value="Yes, I have a Gov Vault account" {{ checked('exists', 'Yes, I have a Gov Vault account') }}>
+                        <label class="govuk-label govuk-radios__label" for="exists-1">
+                          Yes, I have a Gov Vault account
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="exists-2" name="exists" type="radio" value="No, I do not have a Gov Vault account" {{ checked('exists', 'No, I do not have a Gov Vault account') }}>
+                        <label class="govuk-label govuk-radios__label" for="exists-2">
+                          No, I do not have a Gov Vault account
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <a class="govuk-button" href="share_data" role="button">
+                  Continue
+                </a>
+  </div>
+</form>
+
+{% endblock %}

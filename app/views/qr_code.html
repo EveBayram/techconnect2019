@@ -1,0 +1,27 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper " id="main-content" role="main" style="padding-top:10px">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Scan this QR code to complete two-step authentication</h1>
+      <p>Scanning this code will open Gov Vault on your device. You will be asked to confirm which data attributes you wish to share as evidence to support your applicaton.</p>
+<div class="govuk-!-padding-bottom-5"></div>
+      <img src="/public/images/qr.jpeg" alt="qr code for two-factor authentication"></img>
+
+
+<div class="govuk-!-padding-bottom-7"></div>
+  <a class="govuk-button" href="#" role="button">
+    Continue
+  </a>
+  </div>
+</div>
+</main>
+
+{% endblock %}
